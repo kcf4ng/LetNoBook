@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/btn家長班級課表"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -19,7 +19,7 @@
         android:text="班級課表" />
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/btn家長聯絡事項"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -28,10 +28,10 @@
         android:layout_marginStart="25dp"
         android:layout_marginLeft="25dp"
         android:layout_marginBottom="118dp"
-        android:text="授課課表" />
+        android:text="聯絡事項" />
 
     <Button
-        android:id="@+id/button11"
+        android:id="@+id/btn家長通知事項"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -43,7 +43,7 @@
         android:text="通知事項" />
 
     <Button
-        android:id="@+id/button12"
+        android:id="@+id/btn家長即時聊天"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"

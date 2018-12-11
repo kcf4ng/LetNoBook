@@ -16,7 +16,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".Activity2" />
         <activity android:name=".Activity3" />
         <activity android:name=".Activity4" />
@@ -24,8 +23,19 @@
         <activity android:name=".ActivityStu" />
         <activity android:name=".ActivityTea" />
         <activity android:name=".ActivityPAR" />
-        <activity android:name=".MainActivity"></activity>
-
+        <activity android:name=".MainActivity" />
+        <activity android:name=".ActivityTeaClassSyllabus" />
+        <activity android:name=".ActivityTeaOwnSyllabus" />
+        <activity android:name=".ActivityTeaInfo" />
+        <activity android:name=".ActivityTeaContact" />
+        <activity android:name=".ActivityStuClassSyllabus" />
+        <activity android:name=".ActivityStuInfo" />
+        <activity android:name=".ActivityStuContact" />
+        <activity android:name=".ActivityStuDiary" />
+        <activity android:name=".ActivityParSyllabus" />
+        <activity android:name=".ActivityParContact" />
+        <activity android:name=".ActivityParInfo" />
+        <activity android:name=".ActivityParChat"></activity>
     </application>
 
 </manifest>

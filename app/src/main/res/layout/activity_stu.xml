@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/btn學生日誌編輯"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -19,7 +19,7 @@
         android:text="日誌編輯" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/btn學生聯絡事項"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -31,7 +31,7 @@
         android:text="聯絡事項" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/btn學生班級課表"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -43,7 +43,7 @@
         android:text="班級課表" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/btn學生通知事項"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
