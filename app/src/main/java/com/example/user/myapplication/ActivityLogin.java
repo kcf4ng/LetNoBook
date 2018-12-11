@@ -16,6 +16,7 @@ public class ActivityLogin extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
 
+
     }
 
     public void login(View v){
@@ -44,6 +45,7 @@ public class ActivityLogin extends AppCompatActivity {
                     .setPositiveButton("OK", null)
                     .show();
         }
+       finish(); //在第二層主頁點返回鍵，會直接回到主畫面。
     }
 
     public void cancel(View v){
