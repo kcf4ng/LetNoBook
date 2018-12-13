@@ -69,4 +69,16 @@
         android:layout_marginBottom="15dp"
         android:text="聯絡事項" />
 
+    <Button
+        android:id="@+id/btn老師聯絡事項2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginBottom="16dp"
+        android:text="即時聊天" />
+
 </RelativeLayout>
