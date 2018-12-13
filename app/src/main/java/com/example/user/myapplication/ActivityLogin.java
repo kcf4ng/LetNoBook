@@ -28,14 +28,20 @@ public class ActivityLogin extends AppCompatActivity {
             Toast.makeText(this, "登入成功", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(this, ActivityStu.class);
             startActivity(intent);
+            finish(); //在第二層主頁點返回鍵，會直接回到主畫面。
+
         }else if (uid.equals("tea") && pw.equals("tea")){ //登入成功
             Toast.makeText(this, "登入成功", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(this, ActivityTea.class);
             startActivity(intent);
+            finish(); //在第二層主頁點返回鍵，會直接回到主畫面。
+
         }else if (uid.equals("par") && pw.equals("par")){ //登入成功
             Toast.makeText(this, "登入成功", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(this, ActivityPAR.class);
             startActivity(intent);
+            finish(); //在第二層主頁點返回鍵，會直接回到主畫面。
+
         }
         else
         { //登入失敗
@@ -45,7 +51,6 @@ public class ActivityLogin extends AppCompatActivity {
                     .setPositiveButton("OK", null)
                     .show();
         }
-       finish(); //在第二層主頁點返回鍵，會直接回到主畫面。
     }
 
     public void cancel(View v){
