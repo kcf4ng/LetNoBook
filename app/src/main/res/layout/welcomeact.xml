@@ -4,9 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".welcomeAct">
+    tools:context=".welcomeAct"
+    android:background="@drawable/main_bg">
 
-
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/logo"/>
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animation_view"
         android:layout_width="match_parent"
@@ -14,4 +20,5 @@
         app:lottie_autoPlay="true"
         app:lottie_fileName="ribbon.json"
         app:lottie_loop="true" />
+
 </RelativeLayout>
