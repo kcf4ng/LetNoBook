@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".ActivityTeaInfo">
 
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginBottom="272dp" />
+
     <TextView
         android:id="@+id/textView15"
         android:layout_width="wrap_content"
@@ -13,9 +23,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="299dp"
-        android:layout_marginLeft="299dp"
-        android:layout_marginTop="39dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="11dp"
         android:text="日期選擇區塊"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="49dp" />
@@ -52,7 +62,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
-        android:layout_marginTop="94dp"
+        android:layout_marginTop="36dp"
         android:text="今日作業" />
 
     <TextView
@@ -60,24 +70,34 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="174dp"
-        android:text="明日上課用品"
         android:layout_marginLeft="0dp"
-        android:layout_alignParentLeft="true" />
+        android:layout_marginTop="199dp"
+        android:text="明日上課用品" />
 
     <TextView
         android:id="@+id/textView14"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="319dp"
-        android:text="其他通知"
         android:layout_marginLeft="0dp"
-        android:layout_alignParentLeft="true" />
+        android:layout_marginTop="359dp"
+        android:text="其他通知" />
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginBottom="106dp" />
 
     <EditText
         android:id="@+id/editText4"
@@ -86,9 +106,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="167dp"
-        android:layout_marginLeft="167dp"
-        android:layout_marginTop="109dp"
+        android:layout_marginStart="164dp"
+        android:layout_marginLeft="164dp"
+        android:layout_marginTop="140dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="新增今日作業" />
@@ -100,9 +120,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="167dp"
-        android:layout_marginLeft="167dp"
-        android:layout_marginTop="227dp"
+        android:layout_marginStart="166dp"
+        android:layout_marginLeft="166dp"
+        android:layout_marginTop="297dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="新增明日作業" />
@@ -116,8 +136,18 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="166dp"
         android:layout_marginLeft="166dp"
-        android:layout_marginTop="390dp"
+        android:layout_marginTop="465dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="新增其他通知" />
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginBottom="431dp" />
 </RelativeLayout>
