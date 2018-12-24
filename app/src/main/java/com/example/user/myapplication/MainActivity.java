@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 import com.hitomi.cmlibrary.CircleMenu;
 import com.hitomi.cmlibrary.OnMenuSelectedListener;
@@ -16,6 +17,10 @@ import com.hitomi.cmlibrary.OnMenuStatusChangeListener;
 
 public class MainActivity extends AppCompatActivity {
     CircleMenu circleMenu;
+    TextView textView12;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
                 .addSubMenu(Color.parseColor("#FF4B32"), R.drawable.icon_news)
                 .addSubMenu(Color.parseColor("#8A39FF"), R.drawable.icon_contacts)
                 .addSubMenu(Color.parseColor("#FF6A00"), R.drawable.icon_setting)
+
                 .setOnMenuSelectedListener(new OnMenuSelectedListener() {
 
                     @Override
@@ -53,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                             case 1:
 //                                Toast.makeText(MainActivity.this, "簡介", Toast.LENGTH_SHORT).show();
 //                                intent = new Intent(MainActivity.this, InfoAct.class);
-                                uri = Uri.parse("https://www.google.com");
+                                uri = Uri.parse("http://fuxiao.ps.nutn.edu.tw/?page_id=17");
                                 intent = new Intent(Intent.ACTION_VIEW, uri);
                                 startActivity(intent);
                                 MainActivity.this.onResume();
@@ -61,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                             case 2:
 //                                Toast.makeText(MainActivity.this, "頁面轉至校園公告", Toast.LENGTH_SHORT).show();
 //                                intent = new Intent(MainActivity.this, ActNews.class);
-                                uri = Uri.parse("https://developer.android.com/");
+                                uri = Uri.parse("http://fuxiao.ps.nutn.edu.tw/");
                                 intent = new Intent(Intent.ACTION_VIEW, uri);
                                 startActivity(intent);
                                 MainActivity.this.onResume();
@@ -69,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
                             case 3:
 //                                Toast.makeText(MainActivity.this, "頁面轉至聯絡資訊", Toast.LENGTH_SHORT).show();
 //                                intent = new Intent(MainActivity.this, ActContacts.class);
-                                uri = Uri.parse("http://www.iiiedu.org.tw/south/menu/KaohsiunglactionA.htm");
+                                uri = Uri.parse("http://fuxiao.ps.nutn.edu.tw/?page_id=21");
                                 intent = new Intent(Intent.ACTION_VIEW, uri);
                                 startActivity(intent);
                                 MainActivity.this.onResume();
@@ -88,7 +94,9 @@ public class MainActivity extends AppCompatActivity {
                 }).setOnMenuStatusChangeListener(new OnMenuStatusChangeListener() {
 
             @Override
-            public void onMenuOpened() {}
+            public void onMenuOpened() {
+
+            }
 
             @Override
             public void onMenuClosed() {}
