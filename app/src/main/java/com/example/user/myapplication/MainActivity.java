@@ -1,82 +1,100 @@
 package com.example.user.myapplication;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.Toast;
+import com.hitomi.cmlibrary.CircleMenu;
+import com.hitomi.cmlibrary.OnMenuSelectedListener;
+import com.hitomi.cmlibrary.OnMenuStatusChangeListener;
 
 public class MainActivity extends AppCompatActivity {
-    private Button btn校園公告 ;
-    private Button btn校園介紹 ;
-    private Button btn校園聯絡 ;
-    private Button btn登入 ;
-
-
+    CircleMenu circleMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
+
+        //全屏顯示，隱藏窗口所有裝飾
+        //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        //標題是屬於View的，所以窗口所有的修飾部分被隱藏後標題依然有效，需要去掉標題
+        //requestWindowFeature(Window.FEATURE_NO_TITLE);
+        //繼承AppCompatActivity要用↓達成全屏
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
+
         setContentView(R.layout.activity_main);
 
-        btn校園公告 = findViewById(R.id.btn校園公告);
-        btn校園公告.setOnClickListener(new View.OnClickListener(){
+        circleMenu = findViewById(R.id.circle_menu);
+        circleMenu.setMainMenu(Color.parseColor("#FFFFFF"), R.drawable.mainbutton, R.drawable.mainpressedbutton)
+                .addSubMenu(Color.parseColor("#258CFF"), R.drawable.icon_login)
+                .addSubMenu(Color.parseColor("#30A400"), R.drawable.icon_info)
+                .addSubMenu(Color.parseColor("#FF4B32"), R.drawable.icon_news)
+                .addSubMenu(Color.parseColor("#8A39FF"), R.drawable.icon_contacts)
+                .addSubMenu(Color.parseColor("#FF6A00"), R.drawable.icon_setting)
+                .setOnMenuSelectedListener(new OnMenuSelectedListener() {
+
+                    @Override
+                    public void onMenuSelected(int i) {
+                        Intent intent;
+                        Uri uri;
+                        switch (i){
+                            case 0:
+                                Toast.makeText(MainActivity.this, "頁面轉至登入頁", Toast.LENGTH_SHORT).show();
+                                intent = new Intent(MainActivity.this, ActivityLogin.class);
+                                startActivity(intent);
+                                MainActivity.this.onResume();
+                                break;
+                            case 1:
+//                                Toast.makeText(MainActivity.this, "簡介", Toast.LENGTH_SHORT).show();
+//                                intent = new Intent(MainActivity.this, InfoAct.class);
+                                uri = Uri.parse("https://www.google.com");
+                                intent = new Intent(Intent.ACTION_VIEW, uri);
+                                startActivity(intent);
+                                MainActivity.this.onResume();
+                                break;
+                            case 2:
+//                                Toast.makeText(MainActivity.this, "頁面轉至校園公告", Toast.LENGTH_SHORT).show();
+//                                intent = new Intent(MainActivity.this, ActNews.class);
+                                uri = Uri.parse("https://developer.android.com/");
+                                intent = new Intent(Intent.ACTION_VIEW, uri);
+                                startActivity(intent);
+                                MainActivity.this.onResume();
+                                break;
+                            case 3:
+//                                Toast.makeText(MainActivity.this, "頁面轉至聯絡資訊", Toast.LENGTH_SHORT).show();
+//                                intent = new Intent(MainActivity.this, ActContacts.class);
+                                uri = Uri.parse("http://www.iiiedu.org.tw/south/menu/KaohsiunglactionA.htm");
+                                intent = new Intent(Intent.ACTION_VIEW, uri);
+                                startActivity(intent);
+                                MainActivity.this.onResume();
+                                break;
+                            case 4:
+                                Toast.makeText(MainActivity.this, "頁面轉至設定", Toast.LENGTH_SHORT).show();
+                                intent = new Intent(MainActivity.this, ActivitySetting.class);
+                                startActivity(intent);
+                                MainActivity.this.onResume();
+                                break;
+                        }
+
+                    }
+
+
+                }).setOnMenuStatusChangeListener(new OnMenuStatusChangeListener() {
+
             @Override
-            public void onClick(View v) {
-                openActivity2();
-            }
+            public void onMenuOpened() {}
+
+            @Override
+            public void onMenuClosed() {}
+
         });
 
-        btn校園介紹 = findViewById(R.id.btn校園介紹);
-        btn校園介紹.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                openActivity3();
-            }
-        });
-
-        btn校園聯絡 = findViewById(R.id.btn校園聯絡);
-        btn校園聯絡.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                openActivity4();
-            }
-        });
-
-        btn登入 = findViewById(R.id.btn登入);
-        btn登入.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                openActivityLogin();
-            }
-        });
-
-    }
-
-    public void openActivity2() {
-        //校園公告
-        Intent intent = new Intent(this, Activity2.class);
-        startActivity(intent);
-    }
-    public void openActivity3() {
-        //校園介紹
-        Intent intent = new Intent(this, Activity3.class);
-        startActivity(intent);
-    }
-
-    public void openActivity4() {
-        //校園聯絡
-        Intent intent = new Intent(this, Activity4.class);
-        startActivity(intent);
-    }
-
-    public void openActivityLogin() {
-        //登入畫面
-        Intent intent = new Intent(this, ActivityLogin.class);
-        startActivity(intent);
     }
 
 }
